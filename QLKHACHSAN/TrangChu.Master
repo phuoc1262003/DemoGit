@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TrangChu.master.cs" Inherits="QLKHACHSAN.TrangChu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleHome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div class="menu">
+                <div class="noidung">
+                <asp:HyperLink ID="HyperLink1" CssClass="menu1" runat="server" NavigateUrl="~/Default.aspx">Giới Thiệu</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" CssClass="menu1" runat="server" NavigateUrl="~/Phong.aspx">Phòng</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" CssClass="menu1" runat="server" NavigateUrl="~/DichVu.aspx">Dịch Vụ</asp:HyperLink>
+                </div>
+                <div class="search">
+                    <asp:TextBox ID="txttimkiem" CssClass="tk" runat="server" placeholder="Tìm kiếm ..."></asp:TextBox>
+                    <asp:Button ID="Button1" CssClass="nuttk" runat="server" Text="Search" OnClick="Button1_Click" />
+                    <asp:LinkButton ID="LinkButton1" CssClass="login" runat="server" OnClick="LinkButton1_Click1">Đăng Nhập</asp:LinkButton>
+                    <asp:LinkButton ID="quanlyinfo" CssClass="ttcn" CommandArgument= '<%# Eval("MaTK") %>' runat="server" OnClick="quanlyinfo_Click"><i class="fa-solid fa-user"></i></asp:LinkButton>
+                </div>             
+            </div>
+        </header>
+        <div class="banner">
+            <img src="images/khachsancdio.png" alt="Alternate Text" />
+        </div>
+        <div class="loaiphong">
+            <h3>LOẠI PHÒNG</h3>
+            <asp:DataList CssClass="dlist" ID="dl_listlp" runat="server" RepeatColumns="4">
+                <ItemTemplate>
+                    <asp:LinkButton CssClass="bntlist" ID="LinkButton2" runat="server" Text='<%# Eval("TenLP") %>' OnClick="LinkButton2_Click" CommandArgument='<%# Eval("MaLP") %>'></asp:LinkButton>
+                </ItemTemplate>
+            </asp:DataList>
+        </div>
+        <div class="mau"></div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+        <div class="left">
+            <h2>Thông tin</h2>
+            <p>Địa chỉ:123 Điện Ngọc-Điện Bàn-Quảng Nam</p>
+            <p>SDT: 0288 093726 87</p>
+            <p>Email: Hphuoc@gmail.com</p>
+        </div>
+        <div class="right">
+            <h2>Khác</h2>
+            <a href="#">Chính Sách Quyền Riêng</a>
+            <a href="#">Điều khoản Điều kiện</a>
+            <a href="#">Về chúng tôi</a>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>

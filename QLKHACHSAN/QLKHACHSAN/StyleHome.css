@@ -1,0 +1,172 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+* {
+    padding: 0;
+    text-decoration: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#form1 {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #48dbfb;
+    padding: 15px 0px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.noidung {
+    margin-left: 90px;
+    margin-top: 10px;
+}
+
+    .noidung a {
+        color: white;
+        padding-right: 60px;
+        font-size: 30px;
+        font-family: "Poetsen One", sans-serif;
+        font-weight:bold;
+    }
+
+.search {
+    margin-right: 80px;
+    margin-top: 10px;
+}
+
+    .search .tk {
+        margin-right: 30px;
+        padding: 5px 0;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+
+.tk:focus {
+    outline: none;
+}
+
+.search .nuttk {
+    margin-right: 100px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.search .login {
+    color: #ff7f50;
+    border: 1px solid white;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.login:hover {
+    background-color: #dfe6e9;
+}
+.ttcn {
+    /*font-size: 15px;*/
+    /*font-weight: bold;*/
+    border: 1px solid #1e272e;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 15px;
+    padding: 5px 10px;
+}
+.ttcn i {
+    display: inline-block;
+    color:black;
+}
+
+.banner {
+    width: 100%;
+    height: 290px;
+}
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+    }
+
+.loaiphong {
+    background-color: #48dbfb;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+}
+
+h3 {
+    color: white;
+    margin-left: 50px;
+    margin-top: 18px;
+    padding: 3px 80px 3px 30px;
+    border-right: 3px solid white;
+}
+
+.dlist {
+    display: inline-block;
+    margin-left:80px;
+}
+
+    .dlist .bntlist {
+        color: white;
+        font-weight:bold;
+        font-size:15px;
+        text-transform:uppercase;
+        margin-right:80px;
+    }
+.mau{
+    background-color:black;
+    width:100%;
+    height:50px;
+}
+.content{
+    width:100%;
+    height:auto;
+}
+footer {
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+}
+
+.left {
+    margin-left: 200px;
+}
+
+    .left h2 {
+        margin-left: 90px;
+    }
+
+footer .right {
+    margin-left: 400px;
+}
+
+.right h2 {
+    text-align: center;
+    margin-right: 100px;
+}
+
+.right a {
+    display: flex;
+    margin: 20px;
+    margin-right: 100px;
+    text-decoration: none;
+    color: aliceblue;
+}
